@@ -1,0 +1,58 @@
+#
+#    _   __                   ___  ___           _   _
+#   | | / /                   |  \/  |          | | (_)
+#   | |/ / _ __ __ _ _____   _| .  . | ___ _ __ | |_ _  ___  _ __
+#   |    \| '__/ _` |_  / | | | |\/| |/ _ \ '_ \| __| |/ _ \| '_ \
+#   | |\  \ | | (_| |/ /| |_| | |  | |  __/ | | | |_| | (_) | | | |
+#   \_| \_/_|  \__,_/___|\__, \_|  |_/\___|_| |_|\__|_|\___/|_| |_|
+#                         __/ |
+#                        |___/
+#
+# CONFIGURATION:
+#
+# Hex color suport! - format: &#(6 digits from 0-9 or letters a-f) example: &#ff0000
+#
+mention notification:
+  # Idk if you need this option, but here it is!
+  send notification text: true
+  # Choose a way, how you want to send notification text
+  # Available:
+  # - "title"
+  # - "subtitle"
+  # - "title and subtitle" (for split title text and subtitle text use %newline%)
+  # - "action bar" (supports hex colors, type them as default config format)
+  send notification to: subtitle
+  # For placeholder of player who mentioned use "{mentioner}"
+  # For placeholder of displayed mention (color+symbol+name) use "{displayMentioner}"
+  notification text: "&7✉ &#ba832bPlayer &#7875e0@{mentioner} &#ba832bmentioned you! &7✉"
+  # Do you want to use sound in notification?
+  use sound: true
+  # What sound do you want to use?
+  # Find one for yourself here (and just copy it into quotation marks): https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Sound.html
+  sound: "BLOCK_AMETHYST_BLOCK_FALL"
+
+chat mention format:
+  # If this is option is not enabled, nothing under this won't work
+  change format in chat: true
+  mention color: "&#7875e0"
+  # It will appears in chat before mention of player, you can leave it empty but don't remove quotation marks!!!
+  mention prefix: "@"
+  # In case when it didn't find any colors, or you have disabled SCI, what color i have to use as default?
+  default chat color: "&7"
+  # Smart color insertion (SCI) It will find last used color before mention and put it behind mention
+  # If this feature is disabled, it will ALWAYS put there color from option "default chat color"
+  sci:
+    enabled: true
+    # If this feature is enabled, it will clear colors from whole message if player doesn't have permission to use it
+    # This option is for case, if cleaner in your chat manager clears mention color so you can use this color cleaner
+    # instead of your chat manager
+    # IF THIS FEATURE IS ENABLED, IT WILL AUTOMATICALLY FORMAT WHOLE MESSAGE!
+    # If player has permission for hex but not for legacy colors, it will remove hex also
+    cleancolors:
+      enabled: false
+      # Permission for classic colors (&a,&b,&c,&2,etc.)
+      legacy permission: "krazymention.colors.legacy"
+      # Permission for hexadecimal/RGB codes, example: &#ff0000, &x&f&f&0&0&0&0
+      hex permission: "krazymention.colors.hex"
+players mention color:
+  KrazyManJ: "#ebbd34"

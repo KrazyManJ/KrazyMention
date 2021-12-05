@@ -1,0 +1,16 @@
+main: me.KrazyManJ.KrazyMention.Main
+name: KrazyMention
+author: KrazyManJ
+description: Plugin for mention notification. Change format in chat, use title and sound to notify!
+version: 1.3
+api-version: 1.17
+commands:
+  krazymention:
+    permission: krazymention.admin
+permissions:
+  krazymention.mention:
+    description: Permission to mention someone
+  krazymention.mention.multiple:
+    description: Permission to mention multiple players in one message
+  krazymention.admin:
+    description: Permission to reload plugin config with command
